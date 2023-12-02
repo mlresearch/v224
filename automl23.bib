@@ -1,0 +1,294 @@
+@Proceedings{automl23,
+  booktitle         = {Proceedings of the Second International Conference on Automated Machine Learning},
+  name              = {International Conference on Automated Machine Learning},
+  shortname         = {AutoML},
+  year              = {2023},
+  editor            = {Faust, Aleksandra and Garnett, Roman and White, Colin and Hutter, Frank and Gardner, Jacob R.},
+  volume            = {224},
+  start             = {2023-11-12},
+  end               = {2023-11-15},
+  published = {2023-12-02},
+  address           = {Hasso Plattner Institute, Potsdam, Germany},
+  conference_url    = {https://2023.automl.cc/},
+  conference_number = {2}
+}
+
+@InProceedings{lukasik23,
+  title      = {Differentiable Architecture Search: a One-Shot Method?},
+  author    = {Lukasik, Jovita and Geiping, Jonas and Moeller, Michael and Keuper, Margret},
+  pages      = {1/1--18},
+  openreview = {LV-5kHj-uV5},
+  abstract   = {Differentiable architecture search (DAS) is a widely researched tool for the design of novel architectures. The main benefit of DAS is the effectiveness achieved through the weight-sharing one-shot paradigm, which allows efficient architecture search. In this work, we investigate DAS in a systematic case study of inverse problems, which allows us to analyze these potential benefits in a controlled manner.  We demonstrate that the success of DAS can be extended from image classification to signal reconstruction, in principle. However, our experiments also expose three fundamental difficulties in the evaluation of DAS-based methods in inverse problems: First, the results show a large variance in all test cases. Second, the final performance is strongly dependent on the hyperparameters of the optimizer. And third, the performance of the weight-sharing architecture used during training does not reflect the final performance of the found architecture well. While the results on image reconstruction confirm the potential of the DAS paradigm, they challenge the common understanding of DAS as a one-shot method.}
+}
+
+@InProceedings{purucker23a,
+  title      = {CMA-ES for Post Hoc Ensembling in AutoML: A Great Success and Salvageable Failure},
+  author    = {Purucker, Lennart Oswald and Beel, Joeran},
+  pages      = {2/1--23},
+  openreview = {MeCwOxob8jfl},
+  abstract   = {Many state-of-the-art automated machine learning (AutoML) systems use greedy ensemble selection (GES) by Caruana et al. (2004) to ensemble models found during model selection post hoc. Thereby, boosting predictive performance and likely following Auto-Sklearn 1's insight that alternatives, like stacking or gradient-free numerical optimization, overfit. Overfitting in Auto-Sklearn 1 is much more likely than in other AutoML systems because it uses only low-quality validation data for post hoc ensembling. Therefore, we were motivated to analyze whether Auto-Sklearn 1's insight holds true for systems with higher-quality validation data. Consequently, we compared the performance of covariance matrix adaptation evolution strategy (CMA-ES), state-of-the-art gradient-free numerical optimization, to GES on the 71 classification datasets from the AutoML benchmark for AutoGluon. We found that Auto-Sklearn's insight depends on the chosen metric. For the metric ROC AUC, CMA-ES overfits drastically and is outperformed by GES -- statistically significantly for multi-class classification. For the metric balanced accuracy, CMA-ES does not overfit and outperforms GES significantly. Motivated by the successful application of CMA-ES for balanced accuracy, we explored methods to stop CMA-ES from overfitting for ROC AUC. We propose a method to normalize the weights produced by CMA-ES, inspired by GES, that avoids overfitting for CMA-ES and makes CMA-ES perform better than or similar to GES for ROC AUC.}
+}
+
+@InProceedings{segel23,
+  title      = {Symbolic Explanations for Hyperparameter Optimization},
+  author    = {Segel, Sarah and Graf, Helena and Tornede, Alexander and Bischl, Bernd and Lindauer, Marius},
+  pages      = {3/1--22},
+  openreview = {JQwAc91sg_x},
+  abstract   = {Hyperparameter optimization (HPO) methods can determine well-performing hyperparameter configurations efficiently but often lack insights and transparency. We propose to apply symbolic regression to meta-data collected with Bayesian optimization (BO) during HPO. In contrast to prior approaches explaining the effects of hyperparameters on model performance, symbolic regression allows for obtaining explicit formulas quantifying the relation between hyperparameter values and model performance. Overall, our approach aims to make the HPO process more explainable and human-centered, addressing the needs of multiple user groups: First, providing insights into the HPO process can support data scientists and machine learning practitioners in their decisions when using and interacting with HPO tools. Second, obtaining explicit formulas and inspecting their properties could help researchers understand the HPO loss landscape better. In an experimental evaluation, we find that naively applying symbolic regression directly to meta-data collected during HPO is affected by the sampling bias introduced by BO. However, the true underlying loss landscape can be approximated by fitting the symbolic regression on the surrogate model trained during BO. By penalizing longer formulas, symbolic regression furthermore allows the user to decide how to balance the accuracy and explainability of the resulting formulas.}
+}
+
+@InProceedings{wang23a,
+  title      = {Poisson Process for Bayesian Optimization},
+  author    = {Wang, Xiaoxing and Li, Jiaxing and Xue, Chao and Liu, Wei and Liu, Weifeng and Yang, Xiaokang and Yan, Junchi and Tao, Dacheng},
+  pages      = {4/1--20},
+  openreview = {A9FUg5vrw7Y6},
+  abstract   = {Bayesian Optimization (BO) is a sample-efficient black-box optimizer, and extensive methods have been proposed to build the absolute function response of the black-box function through a probabilistic surrogate model, including Tree-structured Parzen Estimator (TPE), Sequential Model Algorithm Configuration (SMAC), and Gaussian process (GP). However, few methods have been explored to estimate the relative rankings of candidates, which can be more robust to noise and have better practicality than absolute function responses, especially when the function responses are intractable but preferences can be acquired. To this end, we propose a novel ranking-based surrogate model based on the Poisson process and introduce an efficient BO framework, namely Poisson Process Bayesian Optimization (PoPBO). Two tailored acquisition functions are further derived from classic LCB and EI to accommodate it. Compared to the classic GP-BO method, our PoPBO has lower computation costs and better robustness to noise, which is verified by abundant experiments. The results on both simulated and real-world benchmarks, including hyperparameter optimization (HPO) and neural architecture search (NAS), show the effectiveness of PoPBO.}
+}
+
+@InProceedings{ericsson23,
+  title      = {Better Practices for Domain Adaptation},
+  author    = {Ericsson, Linus and Li, Da and Hospedales, Timothy},
+  pages      = {5/1--25},
+  openreview = {tQz8u2KU3zy},
+  abstract   = {Distribution shifts are all too common in real-world applications of machine learning. Domain adaptation (DA) aims to address this by providing various frameworks for adapting models to the deployment data without using labels. However, the domain shift scenario raises a second more subtle challenge: the difficulty of performing hyperparameter optimisation (HPO) for these adaptation algorithms without access to a labelled validation set. The unclear validation protocol for DA has led to bad practices in the literature, such as performing HPO using the target test labels when, in real-world scenarios, they are not available. This has resulted in over-optimism about DA research progress compared to reality. In this paper, we analyse the state of DA when using good evaluation practice, by benchmarking a suite of candidate validation criteria and using them to assess popular adaptation algorithms. We show that there are challenges across all three branches of domain adaptation methodology including Unsupervised Domain Adaptation (UDA), Source-Free Domain Adaptation (SFDA), and Test Time Adaptation (TTA). While the results show that realistically achievable performance is often worse than expected, they also show that using proper validation splits is beneficial, as well as showing that some previously unexplored validation metrics provide the best options to date. Altogether, our improved practices covering data, training, validation and hyperparameter optimisation form a new rigorous pipeline to improve benchmarking, and hence research progress, within this important field going forward.}
+}
+
+@InProceedings{johnson23,
+  title      = {Efficient Multi-stage Inference on Tabular Data},
+  author    = {Johnson, Daniel and Markov, Igor L.},
+  pages      = {6/1--15},
+  openreview = {lRFxsSgeYdE},
+  abstract   = {Many ML applications and products train on medium amounts of input data but get bottlenecked in real-time inference. When implementing ML systems, conventional wisdom favors segregating ML code into services queried by product code via Remote Procedure Call (RPC) APIs. This approach clarifies the overall software architecture and simplifies product code by abstracting away ML internals. However, the separation adds network latency and entails additional CPU overhead. Hence, we simplify inference algorithms and embed them into the product code to reduce network communication. For public data sets and a high-performance real-time platform that deals with tabular data, we show that over half of the inputs are often amenable to such optimization, while the remainder can be handled by the original model. By applying our optimization with AutoML to both training and inference, we reduce inference latency by 1.3x, CPU resources by 30\%, and network communication between application front-end and ML back-end by about 50\% for a commercial end-to-end ML platform that serves millions of real-time decisions per second. The crucial role of AutoML is in configuring first-stage inference and balancing the two stages.}
+}
+
+@InProceedings{meyer-lee23,
+  title      = {On the selection of neural architectures from a supernet},
+  author    = {Meyer-Lee, Gabriel and Cheney, Nick},
+  pages      = {7/1--31},
+  openreview = {XM_v85teqN},
+  abstract   = {After DARTS provided a method utilizing a supernet to search for neural network architectures entirely through gradient descent, differentiable supernet-based methods emerged as a powerful and popular approach to efficient neural architecture search (NAS). Following works improved upon many aspects of the DARTS algorithm but generally kept the original method of selecting the final architecture, pruning the lowest magnitude architecture weights. though critiques of this approach have led to alternative architecture selection mechanisms, such as a perturbation-based method. Here we perform a broad comparative evaluation of architecture selection methods in combination with different techniques for training the supernet, and highlight the interdependence between various methods for supernet training and architecture selection mechanisms.  We show the potential for improved results for many NAS supernet training methods via alternate architecture selection mechanisms relative to the pruning-based architecture selection they were introduced, and are typically evaluated, with. In evaluating architecture selection methods, we also demonstrate how zero-shot NAS methods may be effectively integrated into supernet NAS training as new architecture selection mechanisms.}
+}
+
+@InProceedings{kozak23,
+  title      = {forester: A Novel Approach to Accessible and Interpretable AutoML for Tree-Based Modeling},
+  author    = {Kozak, Anna and Ruczy\'nski, Hubert},
+  pages      = {8/1--22},
+  openreview = {Q3DWpGoX7PD},
+  abstract   = {The majority of AutoML solutions are developed in Python. However, a large percentage of data scientists are associated with the R language. Unfortunately, there are limited R solutions available with high entry level which means they are not accessible to everyone. To fill this gap, we present the \emph{forester} package, which offers ease of use regardless of the user's proficiency in the area of machine learning.  The \emph{forester} package is an open-source AutoML package implemented in R designed for training high-quality tree-based models on tabular data. It supports regression and binary classification tasks. A single line of code allows the use of unprocessed datasets, informs about potential issues concerning them, and handles feature engineering automatically. Moreover, hyperparameter tuning is performed by Bayesian optimization, which provides high-quality outcomes. The results are later served as a ranked list of models. Finally, the \emph{forester} package offers a vast training report, including the ranked list, a comparison of trained models, and explanations for the best one.}
+}
+
+@InProceedings{gok23,
+  title      = {Adaptive Regularization for Class-Incremental Learning},
+  author    = {Gok, Elif Ceren and Yildirim, Murat Onur and Kilickaya, Mert and Vanschoren, Joaquin},
+  pages      = {9/1--12},
+  openreview = {HRiwg7ssO7c},
+  abstract   = {Class-Incremental Learning updates a deep classifier with new categories while maintaining the previously observed class accuracy. Regularizing the neural network weights is a common method to prevent forgetting previously learned classes while learning novel ones. However, existing regularizers use a constant magnitude throughout the learning sessions, which may not reflect the varying levels of difficulty of the tasks encountered during incremental learning. This study investigates the necessity of adaptive regularization in Class-Incremental Learning, which dynamically adjusts the regularization strength according to the complexity of the task at hand. We propose a Bayesian Optimization-based approach to automatically determine the optimal regularization magnitude for each learning task. Our experiments on two datasets via two regularizers demonstrate the importance of adaptive regularization for achieving accurate and less forgetful visual incremental learning.}
+}
+
+@InProceedings{dimanov23,
+  title      = {MEOW - Multi-Objective Evolutionary Weapon Detection},
+  author    = {Dimanov, Daniel and Singleton, Colin and Rostami, Shahin and Balaguer-Ballester, Emili},
+  pages      = {10/1--20},
+  openreview = {Eyzx7rDo-JNh},
+  abstract   = {X-ray screening is crucial for ensuring safety and security in crowded public areas. However, X-ray operators are often overwhelmed by the sheer amount of potential threats to assess; thus, current computer vision-aided systems are designed to alleviate these workloads. In this study, we focus on a key, unresolved challenge for developing such automatic X-ray screening systems: the direct application of existing avant garde computer vision approaches does not necessarily yield satisfactory results in the X-ray medium, hindering the effectiveness of current screening systems. To overcome this drawback, we propose a novel automated machine learning (AutoML) multi-objective approach for neural architecture search (NAS) for concealed weapon detection (MEOW). We benchmark MEOW with the state-of-the-art in two comprehensive scenarios in threat identification: SIXray (a popular, massive X-ray dataset) and Residuals (a proprietary, unpublished dataset provided by our industry partners). MEOW consist of the coalescence of two new components: First, we design a heuristic technique to strongly reduce the high computational cost of neuroevolutionary search while preserving a high performance such that it can be effectively used in real-time industrial settings. Second, we devise a novel ensemble approach for combining multiple discovered architectures simultaneously. Leveraging these two characteristics, MEOW outperforms the state-of-the-art while keeping the NAS overhead to a minimum. More broadly, our results suggest that AutoML has a strong potential for security applications.}
+}
+
+@InProceedings{benjamins23,
+  title      = {Self-Adjusting Weighted Expected Improvement for Bayesian Optimization},
+  author    = {Benjamins, Carolin and Raponi, Elena and Jankovic, Anja and Doerr, Carola and Lindauer, Marius},
+  pages      = {11/1--50},
+  openreview = {ydqqogDD5RW},
+  abstract   = {Bayesian Optimization (BO) is a class of surrogate-based, sample-efficient algorithms for optimizing black-box problems with small evaluation budgets. The BO pipeline itself is highly configurable with many different design choices regarding the initial design, surrogate model, and acquisition function (AF). Unfortunately, our understanding of how to select suitable components for a problem at hand is very limited. In this work, we focus on the definition of the AF, whose main purpose is to balance the trade-off between exploring regions with high uncertainty and those with high promise for good solutions. We propose Self-Adjusting Weighted Expected Improvement (SAWEI), where we let the exploration-exploitation trade-off self-adjust in a data-driven manner, based on a convergence criterion for BO. On the noise-free black-box BBOB functions of the COCO benchmarking platform, our method exhibits a favorable any-time performance compared to handcrafted baselines and serves as a robust default choice for any problem structure. The suitability of our method also transfers to HPOBench. With SAWEI, we are a step closer to on-the-fly, data-driven, and robust BO designs that automatically adjust their sampling behavior to the problem at hand.}
+}
+
+@InProceedings{vermetten23,
+  title      = {MA-BBOB: Many-Affine Combinations of BBOB Functions for Evaluating AutoML Approaches in Noiseless Numerical Black-Box Optimization Contexts},
+  author    = {Vermetten, Diederick and Ye, Furong and B\"ack, Thomas and Doerr, Carola},
+  pages      = {12/1--14},
+  openreview = {uN70Dum6pC2},
+  abstract   = {Extending a recent suggestion to generate new instances for numerical black-box optimization benchmarking by interpolating pairs of the well-established BBOB functions from the COmparing COntinuous Optimizers (COCO) platform, we propose in this work a further generalization that allows multiple affine combinations of the original instances and arbitrarily chosen locations of the global optima.   We demonstrate that the MA-BBOB generator can help fill the instance space, while overall patterns in algorithm performance are preserved. By combining the landscape features of the problems with the performance data, we pose the question of whether these features are as useful for algorithm selection as previous studies have implied.  MA-BBOB is built on the publicly available IOHprofiler platform, which facilitates standardized experimentation routines, provides access to the interactive IOHanalyzer module for performance analysis and visualization, and enables comparisons with the rich and growing data collection available for the (MA-)BBOB functions.}
+}
+
+@InProceedings{hellan23,
+  title      = {Obeying the Order: Introducing Ordered Transfer Hyperparameter Optimisation},
+  author    = {Hellan, Sigrid Passano and Shen, Huibin and Aubet, Francois-Xavier and Salinas, David and Klein, Aaron},
+  pages      = {13/1--28},
+  openreview = {zaBJZmaSOf7},
+  abstract   = {We introduce ordered transfer hyperparameter optimisation (OTHPO), a version of transfer learning for hyperparameter optimisation (HPO) where the tasks follow a sequential order. Unlike for state-of-the-art transfer HPO, the assumption is that each task is most correlated to those immediately before it. This matches many deployed settings, where hyperparameters are retuned as more data is collected; for instance tuning a sequence of movie recommendation systems as more movies and ratings are added. We propose a formal definition, outline the differences to related problems and propose a basic OTHPO method that outperforms state-of-the-art transfer HPO. We empirically show the importance of taking order into account using ten benchmarks. The benchmarks are in the setting of gradually accumulating data, and span XGBoost, random forest, approximate k-nearest neighbor, elastic net, support vector machines and a separate real-world motivated optimisation problem. We open source the benchmarks to foster future research on ordered transfer HPO.}
+}
+
+@InProceedings{roshtkhari23,
+  title      = {Balanced Mixture of Supernets for Learning the CNN Pooling Architecture},
+  author    = {Roshtkhari, Mehraveh Javan and Toews, Matthew and Pedersoli, Marco},
+  pages      = {14/1--23},
+  openreview = {8-8k3okjpY},
+  abstract   = {Downsampling layers, including pooling and strided convolutions, are crucial components of the convolutional neural network architecture that determine both the granularity/scale of image feature analysis as well as the receptive field size of a given layer. To fully understand this problem we analyse the performance of models independently trained with each pooling configurations on CIFAR10, using a ResNet20 network and show that the position of the downsampling layers can highly influence the performance of a network and predefined downsampling configurations are not optimal. Network Architecture Search (NAS) might be used to optimize downsampling configurations as an hyperparameter. However, we find that common one-shot NAS based on a single SuperNet do not work for this problem. We argue that this is because a SuperNet trained for finding the optimal pooling configuration fully shares its parameters among all pooling configurations. This makes its training hard because learning some configurations can harm the performance of others. Therefore, we propose a balanced mixture of SuperNets that automatically associates pooling configurations to different weight models and helps to reduce the weight-sharing and interinfluence of pooling configurations on the SuperNet parameters. We evaluate our proposed approach on CIFAR10, CIFAR100, as well as Food101, and show that in all cases our model outperforms other approaches and improves over the default pooling configurations.}
+}
+
+@InProceedings{shchur23,
+  title      = {AutoGluon--TimeSeries: AutoML for Probabilistic Time Series Forecasting},
+  author    = {Shchur, Oleksandr and Turkmen, Ali Caner and Erickson, Nick and Shen, Huibin and Shirkov, Alexander and Hu, Tony and Wang, Bernie},
+  pages      = {15/1--21},
+  openreview = {XHIY3cQ8Tew},
+  abstract   = {We introduce AutoGluon--TimeSeries---an open-source AutoML library for probabilistic time series forecasting. Focused on ease of use and robustness, AutoGluon-TimeSeries enables users to generate accurate point and quantile forecasts with just 3 lines of Python code. Built on the design philosophy of AutoGluon, AutoGluon--TimeSeries leverages ensembles of diverse forecasting models to deliver high accuracy within a short training time. AutoGluon--TimeSeries combines both conventional statistical models, machine-learning based forecasting approaches, and ensembling techniques. In our evaluation on 29 benchmark datasets, AutoGluon--TimeSeries demonstrates strong empirical performance, outperforming a range of forecasting methods in terms of both point and quantile forecast accuracy, and often even improving upon the best-in-hindsight combination of prior methods.}
+}
+
+@InProceedings{purucker23b,
+  title      = {Q(D)O-ES: Population-based Quality (Diversity) Optimisation for Post Hoc Ensemble Selection in AutoML},
+  author    = {Purucker, Lennart Oswald and Schneider, Lennart and Anastacio, Marie and Beel, Joeran and Bischl, Bernd and Hoos, Holger},
+  pages      = {16/1--34},
+  openreview = {zvV7hemQmtLl},
+  abstract   = {Automated machine learning (AutoML) systems commonly ensemble models post hoc to improve predictive performance, typically via greedy ensemble selection (GES). However, we believe that GES may not always be optimal, as it performs a simple deterministic greedy search. In this work, we introduce two novel population-based ensemble selection methods, QO-ES and QDO-ES, and compare them to GES. While QO-ES optimises solely for predictive performance, QDO-ES also considers the diversity of ensembles within the population, maintaining a diverse set of well-performing ensembles during optimisation based on ideas of quality diversity optimisation. The methods are evaluated using 71 classification datasets from the AutoML benchmark, demonstrating that QO-ES and QDO-ES often outrank GES, albeit only statistically significant on validation data. Our results further suggest that diversity can be beneficial for post hoc ensembling but also increases the risk of overfitting.}
+}
+
+@InProceedings{ito23,
+  title      = {OFA$^3$: Automatic selection of the best non-dominated sub-networks for ensembles},
+  author    = {Ito, Rafael Claro and Silva, Emely Pujolli da and Zuben, Fernando J. Von},
+  pages      = {17/1--16},
+  openreview = {0yj3LL-0KcX},
+  abstract   = {Advancement of Neural Architecture Search (NAS) has the potential to significantly improve the efficiency and performance of machine learning systems, as well as enable the exploration of new architectures and applications across a wide range of fields, including computer vision, natural language processing, speech recognition, robotics, and more. A promising direction for developing more scalable and adaptive neural network architectures is the Once-for-All (OFA), a NAS framework that decouples the training and the search stages, meaning that one super-network is trained once, and then multiple searches can be performed according to different deployment scenarios. More recently, the OFA$^2$ strategy improved the search stage of the OFA framework by exploring the multi-objective nature of the problem: a set of non-dominated sub-networks are all obtained at once, with distinct trade-offs involving hardware constraints and accuracy. In this work, we further improve the search stage of the OFA$^2$ by fine-tuning the non-dominated solutions. Furthermore, we propose OFA$^3$, building high-performance ensembles by solving the problem of how to automatically select the optimal subset of the already obtained non-dominated sub-networks. Particularly when components of the ensemble can run in parallel, our results dominate any other configuration of the available sub-networks, taking accuracy and latency as the conflicting objectives.}
+}
+
+@InProceedings{kostovska23,
+  title      = {PS-AAS: Portfolio Selection for Automated Algorithm Selection in Black-Box Optimization},
+  author    = {Kostovska, Ana and Cenikj, Gjorgjina and Vermetten, Diederick and Jankovic, Anja and Nikolikj, Ana and Skvorc, Urban and Korosec, Peter and Doerr, Carola and Eftimov, Tome},
+  pages      = {18/1--17},
+  openreview = {j5IKxqbpE2w},
+  abstract   = {The performance of automated algorithm selection (AAS) strongly depends on the portfolio of algorithms to choose from. Selecting the portfolio is a non-trivial task that requires balancing the trade-off between the higher flexibility of large portfolios with the increased complexity of the AAS task. In practice, probably the most common way to choose the algorithms for the portfolio is a greedy selection of the algorithms that perform well in some reference tasks of interest. We set out in this work to investigate alternative, data-driven portfolio selection techniques. Our proposed method creates algorithm behavior meta-representations, constructs a graph from a set of algorithms based on their meta-representation similarity, and applies a graph algorithm to select a final portfolio of diverse, representative, and non-redundant algorithms. We evaluate two distinct meta-representation techniques (SHAP and performance2vec) for selecting complementary portfolios from a total of 324 different variants of CMA-ES for the task of optimizing the BBOB single-objective problems in dimensionalities 5 and 30 with different cut-off budgets. We test two types of portfolios: one related to overall algorithm behavior and the `personalized' one (related to algorithm behavior per each problem separately). We observe that the approach built on the performance2vec-based representations favors small portfolios with negligible error in the AAS task relative to the virtual best solver from the selected portfolio, whereas the portfolios built from the SHAP-based representations gain from higher flexibility at the cost of decreased performance of the AAS. Across most considered scenarios, personalized portfolios yield comparable or slightly better performance than the classical greedy approach. They outperform the full portfolio in all scenarios.}
+}
+
+@InProceedings{aach23,
+  title      = {Optimal Resource Allocation for Early Stopping-based Neural Architecture Search Methods},
+  author    = {Aach, Marcel and Inanc, Eray and Sarma, Rakesh and Riedel, Morris and Lintermann, Andreas},
+  pages      = {19/1--17},
+  openreview = {lmtNt--6dw},
+  abstract   = {The field of NAS has been significantly benefiting from the increased availability of parallel compute resources, as optimization algorithms typically require sampling and evaluating hundreds of model configurations. Consequently, to make use of these resources, the most commonly used early stopping-based NAS methods are suitable for running multiple trials in parallel. At the same time, also the training time of single model configurations can be reduced, e.g., by employing data-parallel training using multiple GPUs.   This paper investigates the optimal allocation of a fixed amount of parallel workers for conducting NAS. In practice, users have to decide if the computational resources are primarily used to assign more workers to the training of individual trials or to increase the number of trials executed in parallel. The first option accelerates the speed of the individual trials (exploitation) but reduces the parallelism of the NAS loop, whereas for the second option, the runtime of the trials is longer but a larger number of simultaneously processed trials in the NAS loop is achieved (exploration).   Our study encompasses both large- and small-scale scenarios, including tuning models in parallel on a single GPU, with data-parallel training on up to 16 GPUs, and measuring the scalability of NAS on up to 64 GPUs. Our empirical results using the HyperBand, Asynchronous Successive Halving, and Bayesian Optimization HyperBand methods offer valuable insights for users seeking to run NAS on both small and large computational budgets. By selecting the appropriate number of parallel evaluations, the NAS process can be accelerated by factors of ${\approx}$2--5 while preserving the test set accuracy compared to non-optimal resource allocations.}
+}
+
+@InProceedings{zhang23,
+  title      = {Class-attribute Priors: Adapting Optimization to Heterogeneity and Fairness Objective},
+  author    = {Zhang, Xuechen and Li, Mingchen and Vakilian, Vala and Chen, Jiasi and Thrampoulidis, Christos and Oymak, Samet},
+  pages      = {20/1--22},
+  openreview = {9ZE9L4tzO7D},
+  abstract   = {Modern classification problems exhibit heterogeneities across individual classes: Each class may have unique attributes, such as sample size, label quality, or predictability (easy vs difficult), and variable importance at test-time. Without care, these heterogeneities impede the learning process, most notably, when optimizing fairness objectives. We propose an effective and general method to personalize the optimization strategy of individual classes so that optimization better adapts to heterogeneities. Concretely, class-attribute priors (CAP) is a meta-strategy which proposes a class-specific strategy based on its attributes. This meta approach leads to substantial improvements over naive approach of assigning separate hyperparameters for each class. We instantiate CAP for loss function design and posthoc logit adjustment, with an emphasis on label-imbalanced problems. We show that CAP is competitive with prior art and its flexibility unlocks noticeable improvements for fairness objectives beyond balanced accuracy. Finally, we evaluate CAP on problems with label noise as well as weighted test objectives to showcase how CAP can synergistically leverage different class attributes.}
+}
+
+@InProceedings{mohan23,
+  title      = {AutoRL Hyperparameter Landscapes},
+  author    = {Mohan, Aditya and Benjamins, Carolin and Wienecke, Konrad and Dockhorn, Alexander and Lindauer, Marius},
+  pages      = {21/1--27},
+  openreview = {Ec09TcV_HKq},
+  abstract   = {Although Reinforcement Learning (RL) has shown to be capable of producing impressive results, its use is limited by the impact of its hyperparameters on performance. This often makes it difficult to achieve good results in practice. Automated RL (AutoRL) addresses this difficulty, yet little is known about the dynamics of the hyperparameter landscapes that hyperparameter optimization (HPO) methods traverse in search of optimal configurations. In view of existing AutoRL approaches dynamically adjusting hyperparameter configurations, we propose an approach to build and analyze these hyperparameter landscapes not just for one point in time but at multiple points in time throughout training. Addressing an important open question on the legitimacy of such dynamic AutoRL approaches, we provide thorough empirical evidence that the hyperparameter landscapes strongly vary over time across representative algorithms from RL literature (DQN, PPO and SAC) in different kinds of environments (Cartpole, Bipedal Walker and Hopper). This supports the theory that hyperparameters should be dynamically adjusted during training and shows the potential for more insights on AutoRL problems that can be gained through landscape analysis. Our code can be found at \url{https://anon-github.automl.cc/r/autorl_landscape-F04D}.}
+}
+
+@InProceedings{chen23,
+  title      = {``No Free Lunch'' in Neural Architectures? A Joint Analysis of Expressivity, Convergence, and Generalization},
+  author    = {Chen, Wuyang and Huang, Wei and Wang, Zhangyang},
+  pages      = {22/1--29},
+  openreview = {EMys3eIDJ2},
+  abstract   = {The prosperity of deep learning and automated machine learning (AutoML) is largely rooted in the development of novel neural networks -- but what defines and controls the ``goodness'' of networks in an architecture space? Test accuracy, a golden standard in AutoML, is closely related to three aspects: (1) expressivity (how complicated functions a network can approximate over the training data); (2) convergence (how fast the network can reach low training error under gradient descent); (3) generalization (whether a trained network can be generalized from the training data to unseen samples with low test error). However, most previous theory papers focus on fixed model structures, largely ignoring sophisticated networks used in practice. To facilitate the interpretation and understanding of the architecture design by AutoML, we target connecting a bigger picture: how does the architecture jointly impact its expressivity, convergence, and generalization? We demonstrate the ``no free lunch'' behavior in networks from an architecture space: given a fixed budget on the number of parameters, there does not exist a single architecture that is optimal in all three aspects. In other words, separately optimizing expressivity, convergence, and generalization will achieve different networks in the architecture space. Our analysis can explain a wide range of observations in AutoML. Experiments on popular benchmarks confirm our theoretical analysis. Our codes are attached in the supplement.}
+}
+
+@InProceedings{shen23,
+  title      = {Computationally Efficient High-Dimensional Bayesian Optimization via Variable Selection},
+  author    = {Shen, Yihang and Kingsford, Carl},
+  pages      = {23/1--27},
+  openreview = {QXKWSM0rFCK1},
+  abstract   = {Bayesian Optimization (BO) is a widely-used method for the global optimization of black-box functions. While BO has been successfully applied to many scenarios, scaling BO algorithms to high-dimensional domains remains a challenge. Optimizing such functions by vanilla BO is extremely time-consuming. Alternative strategies for high-dimensional BO that are based on the idea of embedding the high-dimensional space to one with low dimensions are sensitive to the choice of the embedding dimension, which needs to be pre-specified. We develop a new computationally efficient high-dimensional BO method that leverages variable selection. We analyze the computational complexity of our algorithm and demonstrate its efficacy on several synthetic and real problems through empirical evaluations.}
+}
+
+@InProceedings{aichberger23,
+  title      = {ELENAS: Elementary Neural Architecture Search},
+  author    = {Aichberger, Lukas and Klambauer, G\"unter},
+  pages      = {24/1--19},
+  openreview = {1tZY0La5GFRp},
+  abstract   = {Deep neural networks typically rely on a few key building blocks such as feed-forward, convolution, recurrent, long short-term memory, or attention blocks. On an elementary level, these blocks consist of a relatively small number of different mathematical operations. However, as the number of all combinations of these operations is immense, crafting such novel building blocks requires profound expert knowledge and is far from being fully explored. We propose Elementary Neural Architecture Search (ELENAS), a method that learns to combine elementary mathematical operations to form new building blocks for deep neural networks. These building blocks are represented as computational graphs, which are processed by graph neural networks as part of a reinforcement learning system. Our approach contrasts the current research direction of Neural Architecture Search, which mainly focuses on designing neural networks by altering and combining a few, already established, building blocks. In a set of experiments, we demonstrate that our method leads to efficient building blocks that achieve strong generalization and transfer well to real-world data. When stacked together, they approach and even outperform state-of-the-art neural networks at several prediction tasks. Our underlying methodological framework offers high flexibility and broad applicability across domains while requiring relatively small computational costs. Consequently, it has the potential to find novel building blocks that become of general importance for machine learning practitioners beyond specific data or use cases.}
+}
+
+@InProceedings{loni23,
+  title      = {Learning Activation Functions for Sparse Neural Networks},
+  author    = {Loni, Mohammad and Mohan, Aditya and Asadi, Mehdi and Lindauer, Marius},
+  pages      = {25/1--19},
+  openreview = {3dpOZ2dZcAa},
+  abstract   = {Sparse Neural Networks (SNNs) can potentially demonstrate similar performance to their dense counterparts while saving significant energy and memory at inference. However, the accuracy drop incurred by SNNs, especially at high pruning ratios, can be an issue in  critical deployment conditions. While recent works mitigate this issue through sophisticated pruning techniques, we shift our focus to an overlooked factor: hyperparameters and activation functions. Our analyses have shown that the accuracy drop can additionally be attributed to (i) Using ReLU as the default choice for activation functions unanimously, and (ii) Fine-tuning SNNs with the same hyperparameters as dense counterparts. Thus, we focus on learning a novel way to tune activation functions for sparse networks and combining these with a separate hyperparameter optimization (HPO) regime for sparse networks. By conducting experiments on popular DNN models (LeNet-5, VGG-16, ResNet-18, and EfficientNet-B0) trained on MNIST, CIFAR-10, and ImageNet-16 datasets, we show that the novel combination of these two approaches, dubbed Sparse Activation Function Search, short: SAFS, results in up to 15.53\%, 8.88\%, and 6.33\% absolute improvement in the accuracy for  LeNet-5, VGG-16, and ResNet-18 over the default training protocols, especially at high pruning ratios.}
+}
+
+@InProceedings{feffer23,
+  title      = {Searching for Fairer Machine Learning Ensembles},
+  author    = {Feffer, Michael and Hirzel, Martin and Hoffman, Samuel C and Kate, Kiran and Ram, Parikshit and Shinnar, Avraham},
+  pages      = {26/1--19},
+  openreview = {7Nbd1Ru1M_t},
+  abstract   = {Bias mitigators can improve algorithmic fairness in machine learning models, but their effect on fairness is often not stable across data splits.  A popular approach to train more stable models is ensemble learning, but unfortunately, it is unclear how to combine ensembles with mitigators to best navigate trade-offs between fairness and predictive performance.  To that end, we extended the open-source library Lale to enable the modular composition of 8 mitigators, 4 ensembles, and their corresponding hyperparameters, and we empirically explored the space of configurations on 13 datasets.  We distilled our insights from this exploration in the form of a guidance diagram that can serve as a starting point for practitioners that we demonstrate is robust and reproducible.  We also ran automatic combined algorithm selection and hyperparmeter tuning (or CASH) over ensembles with mitigators.  The solutions from the guidance diagram perform similar to those from CASH on many datasets.}
+}
+
+@InProceedings{xiang23,
+  title      = {Exploiting Network Compressibility and Topology in Zero-Cost NAS},
+  author    = {Xiang, Lichuan and Hunter, Rosco and Xu, Minghao and Dudziak, {\L}ukasz and Wen, Hongkai},
+  pages      = {27/1--14},
+  openreview = {y7rbX884LZrX},
+  abstract   = {Neural Architecture Search (NAS) has been widely used to discover high-performance neural network architectures over manually designed approaches. Despite their success, current NAS approaches often require extensive evaluation of many candidate architectures in the search space or training of large super networks. To reduce the search cost, recently proposed zero-cost proxies are utilized to efficiently predict the performance of an architecture. However, while many new proxies have been proposed in recent years, relatively little attention has been dedicated to pushing our understanding of the existing ones, with their mutual effects on each other being a particularly -- but not entirely -- overlooked topic. Contrary to that trend, in our work, we argue that it is worth revisiting and analysing the existing proxies in order to further push the boundaries of zero-cost NAS. Towards that goal, we propose to view the existing proxies through a common lens of network compressibility, trainability, and expressivity, as discussed in pruning literature. Notably, doing so allows us to build a better understanding of the high-level relationship between different proxies as well as refine some of them into their more informative variants. We leverage these insights to design a novel saliency and metric aggregation method informed by compressibility, orthogonality and network topology. We show that our proposed methods are simple but powerful and yield some state-of-the-art results across popular NAS benchmarks.}
+}
+
+@InProceedings{fostiropoulos23,
+  title      = {ABLATOR: Robust Horizontal-Scaling of Machine Learning Ablation Experiments},
+  author    = {Fostiropoulos, Iordanis and Itti, Laurent},
+  pages      = {28/1--15},
+  openreview = {eBLV3i7PG1c},
+  abstract   = {Understanding the efficacy of a method requires ablation experiments. Current Machine Learning (ML) workflows emphasize the vertical scaling of large models with paradigms such as `data-parallelism' or `model-parallelism'. As a consequence, there is a lack of methods for horizontal scaling of multiple experimental trials. Horizontal scaling is labor intensive when different tools are used for different experiment stages, such as for hyper-parameter optimization, distributed execution, or the consolidation of artifacts. We identify that errors in earlier stages of experimentation propagate to the analysis. Based on our observations, experimental results, and the current literature, we provide recommendations on best practices to prevent errors. To reduce the effort required to perform an accurate analysis and address common errors when scaling the execution of multiple experiments, we introduce ABLATOR. Our framework uses a stateful experiment design paradigm that provides experiment persistence and is robust to errors. Our actionable analysis artifacts are automatically produced by the experiment state and reduce the time to evaluate a hypothesis. We evaluate ABLATOR with ablation studies on a Transformer model, `Tablator', where we study the effect of 6 architectural components, 8 model hyperparameters, 3 training hyperparameters, and 4 dataset preprocessing methodologies on 11 tabular datasets. We performed the largest ablation experiment for tabular data on Transformer models to date, evaluating 2,337 models in total. Finally, we open source ABLATOR; \url{https://github.com/fostiropoulos/ablator}}
+}
+
+@InProceedings{kerssies23,
+  title      = {Neural Architecture Search for Visual Anomaly Segmentation},
+  author    = {Kerssies, Tommie and Vanschoren, Joaquin},
+  pages      = {29/1--14},
+  openreview = {O0XkkITcLJKu},
+  abstract   = {This paper presents the first application of neural architecture search to the complex task of segmenting visual anomalies. Measurement of anomaly segmentation performance is challenging due to imbalanced anomaly pixels, varying region areas, and various types of anomalies. First, the region-weighted Average Precision (rwAP) metric is proposed as an alternative to existing metrics, which does not need to be limited to a specific maximum false positive rate. Second, the AutoPatch neural architecture search method is proposed, which enables efficient segmentation of visual anomalies without any training. By leveraging a pre-trained supernet, a black-box optimization algorithm can directly minimize computational complexity and maximize performance on a small validation set of anomalous examples. Finally, compelling results are presented on the widely studied MVTec dataset, demonstrating that AutoPatch outperforms the current state-of-the-art with lower computational complexity, using only one example per type of anomaly. The results highlight the potential of automated machine learning to optimize throughput in industrial quality control. The code for AutoPatch is available at: \url{https://github.com/tommiekerssies/AutoPatch}.}
+}
+
+@InProceedings{wang23b,
+  title      = {Cost-Effective Hyperparameter Optimization for Large Language Model Generation Inference},
+  author    = {Wang, Chi and Liu, Xueqing and Awadallah, Ahmed Hassan},
+  pages      = {30/1--17},
+  openreview = {DoGmh8A39O},
+  abstract   = {Large Language Models (LLMs) have sparked significant interest in their generative capabilities, leading to the development of various commercial applications. The high cost of using the models drives application builders to maximize the value of generation under a limited inference budget. This paper presents a study of optimizing inference hyperparameters such as the number of responses, temperature and max tokens, which significantly affects the utility/cost of text generation. We design a framework named EcoOptiGen which leverages economical hyperparameter optimization and cost-based pruning. Experiments with the GPT-3.5/GPT-4 models on a variety of tasks verify its effectiveness. EcoOptiGen is implemented in the ``autogen'' package of the FLAML library: \url{https://aka.ms/autogen}.}
+}
+
+@InProceedings{hirzel23,
+  title      = {Oversampling to Repair Bias and Imbalance Simultaneously},
+  author    = {Hirzel, Martin and Ram, Parikshit},
+  pages      = {31/1--26},
+  openreview = {CF7FzuUkUck},
+  abstract   = {Both group bias and class imbalance occur when instances with certain characteristics are under-represented in the data.  Group bias causes estimators to be unfair and class imbalance causes estimators to be inaccurate.  Oversampling ought to address both kinds of under-representation.  Unfortunately, it is hard to pick a level of oversampling that yields the best fairness and accuracy for a given estimator.  This paper introduces Orbis, an oversampling algorithm that can be precisely tuned for both fairness and accuracy.  Orbis is a pre-estimator bias mitigator that modifies the data used to train downstream estimators.  This paper demonstrates how to use automated machine learning to tune Orbis along with the choice of estimator that follows it and empirically compares various approaches for blending multiple metrics into a single optimizer objective.  Overall, this paper introduces a new bias mitigator along with a methodology for training and tuning it.}
+}
+
+@InProceedings{carmichael23,
+  title      = {Learning Debuggable Models Through Multi-Objective NAS},
+  author    = {Carmichael, Zachariah J and Moon, Tim and Jacobs, Sam Ade},
+  pages      = {32/1--41},
+  openreview = {AwL9ZZOPVlN},
+  abstract   = {Monumental advances in deep learning have led to unprecedented achievements across various domains. While the performance of deep neural networks is indubitable, the architectural design and interpretability of such models are nontrivial. Research has been introduced to automate the design of neural network architectures through neural architecture search (NAS). Recent progress has made these methods more pragmatic by exploiting distributed computation and novel optimization algorithms. However, there is little work in optimizing architectures for interpretability. To this end, we propose a multi-objective distributed NAS framework that optimizes for both task performance and ''introspectability,'' a surrogate metric for the debuggability of a model. We leverage the non-dominated sorting genetic algorithm (NSGA-II) and explainable AI (XAI) techniques to reward architectures that can be better comprehended by domain experts. The framework is evaluated on several image classification datasets. We demonstrate that jointly optimizing for task error and introspectability leads to more disentangled and debuggable architectures that perform within tolerable error.}
+}
+
+@InProceedings{lopez23,
+  title      = {AlphaD3M: An Open-Source AutoML Library for Multiple ML Tasks},
+  author    = {Lopez, Roque and Lourenco, Raoni and Rampin, Remi and Castelo, Sonia and Santos, A\'ecio S. R. and Ono, Jorge Henrique Piazentin and Silva, Claudio and Freire, Juliana},
+  pages      = {33/1--22},
+  openreview = {71eJdMzCCIi},
+  abstract   = {We present AlphaD3M, an open-source Python library that supports a wide range of machine learning tasks over different data types. We discuss the challenges involved in supporting multiple tasks and how AlphaD3M addresses them by combining deep reinforcement learning and meta-learning to effectively construct pipelines over a large collection of primitives. To better integrate the use of AutoML within the data science lifecycle, we have built an ecosystem of tools around AlphaD3M that support user-in-the loop tasks, including the selection of suitable pipelines and the development of solutions for complex systems. We present use cases that demonstrate some of these features. We report the results of detailed experimental evaluations which show that AlphaD3M is effective and derives high-quality pipelines for a diverse set of problems with performance that is comparable or superior to state-of-the-art AutoML systems.}
+}
+
+@InProceedings{akhauri23,
+  title      = {Multi-Predict: Few Shot Predictors For Efficient Neural Architecture Search},
+  author    = {Akhauri, Yash and Abdelfattah, Mohamed S},
+  pages      = {34/1--23},
+  openreview = {14U6uzrh-wr},
+  abstract   = {Many hardware-aware neural architecture search (NAS) methods have been developed to optimize the topology of neural networks (NN) with the joint objectives of higher accuracy and lower latency. Recently, both accuracy and latency predictors have been used in NAS with great success, achieving high sample efficiency and accurate modeling of hardware (HW) device latency respectively. However, a new accuracy predictor needs to be trained for every new NAS search space or NN task, and a new latency predictor needs to be additionally trained for every new HW device. In this paper, we explore methods to enable multi-task, multi-search-space, and multi-HW adaptation of accuracy and latency predictors to reduce the cost of NAS.  We introduce a novel search-space independent NN encoding based on zero-cost proxies that achieves sample-efficient prediction on multiple tasks and NAS search spaces, improving the end-to-end sample efficiency of latency and accuracy predictors by over an order of magnitude in multiple scenarios. For example, our NN encoding enables multi-search-space transfer of latency predictors from NASBench-201 to FBNet (and vice-versa) in under 85 HW measurements, a 400${\times}$ improvement in sample efficiency compared to a recent meta-learning approach.  Our method also improves the total sample efficiency of accuracy predictors by over an order of magnitude. Finally, we demonstrate the effectiveness of our method for multi-search-space and multi-task accuracy prediction on 28 NAS search spaces and tasks.}
+}
+
+@InProceedings{navarro23,
+  title      = {Meta-Learning for Fast Model Recommendation in Unsupervised Multivariate Time Series Anomaly Detection },
+  author    = {Navarro, Jose Manuel and Huet, Alexis and Rossi, Dario},
+  pages      = {35/1--19},
+  openreview = {7cUV9K3ns9Q},
+  abstract   = {Unsupervised model recommendation for anomaly detection is a recent discipline for which there is no existing work that focuses on multivariate time series data. This paper studies that problem under real-world restrictions, most notably: (i) a limited time to issue a recommendation, which renders existing methods based around the testing of a large pool of models unusable;  (ii) the need for generalization to previously unseen data sources, which is seldom factored in the experimental evaluation.  We turn to meta-learning and propose Hydra, the first meta-recommender for anomaly detection in literature that we especially analyze in the context of multivariate times series. We conduct our experiments using 94  public datasets from 4 different data sources. Our ablation study testifies that our meta-recommender achieves a higher performance than the current state of the art, including in difficult scenarios in which data similarity is minimal: our proposal is able to recommend a model in the top 10\% (13\%) of the algorithmic pool for known (unseen) sources of data.}
+}

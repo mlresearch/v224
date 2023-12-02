@@ -1,0 +1,92 @@
+---
+booktitle: Proceedings of the Second International Conference on Automated Machine
+  Learning
+shortname: AutoML
+year: '2023'
+volume: '228'
+start: 2023-11-12
+end: 2023-11-15
+published: 2023-12-02
+conference_number: '2'
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: 2640-3498
+id: automl23
+month: 0
+cycles: false
+bibtex_editor: Faust, Aleksandra and Garnett, Roman and White, Colin and Hutter, Frank
+  and Gardner, Jacob R.
+editor:
+- given: Aleksandra
+  family: Faust
+- given: Roman
+  family: Garnett
+- given: Colin
+  family: White
+- given: Frank
+  family: Hutter
+- given: Jacob R.
+  family: Gardner
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of the Second International Conference on Automated Machine Learning
+    Held in Hasso Plattner Institute, Potsdam, Germany on 12-15 November 2023
+
+  Published as Volume 228 by the Proceedings of Machine Learning Research on 02 December 2023.
+
+  Volume Edited by:
+    Aleksandra Faust
+    Roman Garnett
+    Colin White
+    Frank Hutter
+    Jacob R. Gardner
+
+  Series Editors:
+    Neil D. Lawrence
+date_str: 12--15 Nov
+url: https://proceedings.mlr.press
+author:
+  name: PMLR
+baseurl: "/v228"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+remote_theme: mlresearch/jekyll-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: v228
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
+volume_type: Volume
+volume_dir: v228
+email: ''
+conference:
+  name: International Conference on Automated Machine Learning
+  url: https://2023.automl.cc/
+  location: Hasso Plattner Institute, Potsdam, Germany
+  dates:
+  - 2023-11-12
+  - 2023-11-13
+  - 2023-11-14
+  - 2023-11-15
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+orig_bibfile: "/Users/neil/mlresearch/v228/automl23.bib"
+# Site settings
+# Original source:  /Users/neil/mlresearch/v228/automl23.bib
