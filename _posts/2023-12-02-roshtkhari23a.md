@@ -26,10 +26,10 @@ issn: 2640-3498
 id: roshtkhari23a
 month: 0
 tex_title: Balanced Mixture of Supernets for Learning the CNN Pooling Architecture
-firstpage: 14/1
+firstpage: 8/1
 lastpage: 23
-page: 14/1-23
-order: 14
+page: 8/1-23
+order: 8
 cycles: false
 bibtex_author: Roshtkhari, Mehraveh Javan and Toews, Matthew and Pedersoli, Marco
 author:

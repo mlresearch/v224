@@ -27,10 +27,10 @@ issn: 2640-3498
 id: fostiropoulos23a
 month: 0
 tex_title: 'ABLATOR: Robust Horizontal-Scaling of Machine Learning Ablation Experiments'
-firstpage: 28/1
+firstpage: 19/1
 lastpage: 15
-page: 28/1-15
-order: 28
+page: 19/1-15
+order: 19
 cycles: false
 bibtex_author: Fostiropoulos, Iordanis and Itti, Laurent
 author:
