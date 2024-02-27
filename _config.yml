@@ -3,7 +3,7 @@ booktitle: Proceedings of the Second International Conference on Automated Machi
   Learning
 shortname: AutoML
 year: '2023'
-volume: '228'
+volume: '224'
 start: 2023-11-12
 end: 2023-11-15
 published: 2023-12-02
@@ -33,7 +33,7 @@ description: |
   Proceedings of the Second International Conference on Automated Machine Learning
     Held in Hasso Plattner Institute, Potsdam, Germany on 12-15 November 2023
 
-  Published as Volume 228 by the Proceedings of Machine Learning Research on 02 December 2023.
+  Published as Volume 224 by the Proceedings of Machine Learning Research on 02 December 2023.
 
   Volume Edited by:
     Aleksandra Faust
@@ -48,7 +48,7 @@ date_str: 12--15 Nov
 url: https://proceedings.mlr.press
 author:
   name: PMLR
-baseurl: "/v228"
+baseurl: "/v224"
 twitter_username: MLResearchPress
 github_username: mlresearch
 markdown: kramdown
@@ -65,7 +65,7 @@ style: pmlr
 permalink: "/:title.html"
 ghub:
   edit: true
-  repository: v228
+  repository: v224
 display:
   copy_button:
     bibtex: true
@@ -73,7 +73,7 @@ display:
     apa: true
   comments: false
 volume_type: Volume
-volume_dir: v228
+volume_dir: v224
 email: ''
 conference:
   name: International Conference on Automated Machine Learning
@@ -87,6 +87,6 @@ conference:
 analytics:
   google:
     tracking_id: UA-92432422-1
-orig_bibfile: "/Users/neil/mlresearch/v228/automl23.bib"
+orig_bibfile: "/Users/neil/mlresearch/v224/automl23.bib"
 # Site settings
-# Original source:  /Users/neil/mlresearch/v228/automl23.bib
+# Original source:  /Users/neil/mlresearch/v224/automl23.bib

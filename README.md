@@ -1,4 +1,4 @@
-# PMLR 228
+# PMLR 224
 
 To suggest fixes to this volume please make a pull request containing the changes requested and a justification for the changes.
 
@@ -12,7 +12,7 @@ For details of what is required to submit a proceedings please check https://pro
 
 
 
-Published as Volume 228 by the Proceedings of Machine Learning Research on 02 December 2023.
+Published as Volume 224 by the Proceedings of Machine Learning Research on 02 December 2023.
 
 Volume Edited by:
   * Aleksandra Faust
